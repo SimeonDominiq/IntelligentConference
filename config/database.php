@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 if(env('APP_ENV') === 'heroku'){
     $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     $host = $url["host"];

@@ -10,10 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// Route::get('/{path}', function () {
-//     return view('app');
-// })->where('path', '(?!api)([A-z\d-\/_.]+)?');
 Route::get('/{path}', function () {
     return view('app');
-})->where('path', '.*');
+})->where('path', '(?!api)([A-z\d-\/_.]+)?');
+// Route::get('/{path}', function () {
+//     return view('app');
+// })->where('path', '.*');

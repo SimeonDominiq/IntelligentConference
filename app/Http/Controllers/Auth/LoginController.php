@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use \Illuminate\Http\Response as Res;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use App\Http\Traits\ApiTrait;
+use App\Http\Traits\APITrait;
 
 use App\User;
 
@@ -28,7 +28,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers, ApiTrait;
+    use AuthenticatesUsers, APITrait;
 
     /**
      * Where to redirect users after login.

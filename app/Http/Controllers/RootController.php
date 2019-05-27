@@ -7,13 +7,13 @@ use Illuminate\Http\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
-use App\Http\Traits\ApiTrait;
+use App\Http\Traits\APITrait;
 
 use App\User;
 
 class RootController extends Controller
 {
-    use ApiTrait;
+    use APITrait;
 
     public static function hashFunction($strlnt = null) {
         $length = is_null($strlnt)? 20 : $strlnt;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import $ from "jquery";
 import DataTable from "datatables.net";
 import { Link } from "react-router-dom";
@@ -13,9 +13,6 @@ import { DataTableBuild } from "../DataTable/DataTable";
 $.DataTable = DataTable;
 
 function DashboardPage() {
-    const [isloading, setIsLoading] = useState(true);
-    const [conferences, setConferences] = useState([]);
-
     const headings = [
         "Title",
         "Description",
@@ -26,8 +23,11 @@ function DashboardPage() {
 
     const footer = ["Title", "Description", "Start Date", "End Date", "Action"];
 
+    const [isloading, setIsLoading] = useState(true);
+    const [conferences, setConferences] = useState([]);
+
     useEffect(() => {
-        $("#dataTable").DataTable();
+        fetchConferences(conferences);
     }, []);
 
     const fetchConferences = async () => {
@@ -39,7 +39,7 @@ function DashboardPage() {
     };
 
     useEffect(() => {
-        fetchConferences(conferences);
+        $("#dataTable").DataTable();
     }, []);
 
     return (

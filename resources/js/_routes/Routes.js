@@ -1,6 +1,7 @@
+import React from "react";
 import MainApp from "../components/MainApp";
-import { LoginPage } from "../components/LoginPage";
-import { RegisterPage } from "../components/RegisterPage";
+import LoginPage from "../components/LoginPage/LoginPage";
+import RegisterPage from "../components/RegisterPage/RegisterPage";
 import { DashboardPage } from "../components/DashboardPage";
 import { AddConference } from "../components/AddConference";
 import { ConferenceDetails } from "../components/ConferenceDetails";

@@ -24,7 +24,7 @@ function LoginPage(props) {
         if (user && user.token) {
             history.push("/dashboard");
         }
-    });
+    }, []);
 
     const submit = event => {
         event.preventDefault();
@@ -76,11 +76,11 @@ function LoginPage(props) {
                                                     }`}
                                                 >
                                                     <input
-                                                        type="tel"
+                                                        type="email"
                                                         name="email"
                                                         id="email"
                                                         className="form-control form-control-user"
-                                                        placeholder="Enter email"
+                                                        placeholder="Enter your email"
                                                         {...formData.email
                                                             .input}
                                                     />
@@ -181,9 +181,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-const connectedPage = connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(LoginPage);
-
-export { connectedPage as LoginPage };

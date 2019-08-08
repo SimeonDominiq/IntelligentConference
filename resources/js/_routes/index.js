@@ -25,7 +25,14 @@ class Routes extends Component {
                 <Switch>
                     {routes.map((route, i) => {
                         if (route.auth) {
-                            return <ProtectedRoute key={i} {...route} />;
+                            return (
+                                <ProtectedRoute
+                                    key={i}
+                                    isgeneral={route.general}
+                                    isadmin={route.admin}
+                                    {...route}
+                                />
+                            );
                         } else {
                             return <PublicRoute key={i} {...route} />;
                         }

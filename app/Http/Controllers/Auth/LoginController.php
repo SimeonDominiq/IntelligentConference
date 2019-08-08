@@ -67,6 +67,7 @@ class LoginController extends Controller
             }
 
             $currentUser = Auth::user();
+            $currentUser->role = 2;
             $currentUser['token'] = $token;
 
             return $this->respond([

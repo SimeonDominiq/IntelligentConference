@@ -25,6 +25,7 @@ const Routes = [
         path: "/register",
         exact: true,
         auth: false,
+        admin: false,
         component: RegisterPage
     },
     {
@@ -37,6 +38,7 @@ const Routes = [
         path: "/add-conference",
         exact: true,
         auth: true,
+        admin: false,
         component: AddConference
     },
     {

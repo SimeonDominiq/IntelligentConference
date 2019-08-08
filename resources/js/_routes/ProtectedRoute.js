@@ -11,6 +11,7 @@ const ProtectedRoute = ({
         {...rest}
         render={props => {
             const currentUser = localStorage.getItem("user");
+            const user_role = 2;
             if (currentUser == null) {
                 return (
                     <Redirect
@@ -25,8 +26,7 @@ const ProtectedRoute = ({
             // check if route is restricted by role
             if (
                 !isgeneral &&
-                ((isadmin && currentUser.user.role != 4) ||
-                    (!isadmin && currentUser.user.role == 4))
+                ((isadmin && user_role != 4) || (!isadmin && user_role == 4))
             ) {
                 // role not authorised so redirect to home page
                 return <Redirect to={{ pathname: "/dashboard" }} />;
@@ -37,5 +37,9 @@ const ProtectedRoute = ({
         }}
     />
 );
+
+function showUser(user) {
+    console.log(user);
+}
 
 export default ProtectedRoute;

@@ -1,0 +1,47 @@
+.white-logo a {
+    color: #fff;
+}
+.validate-error input,
+.validate-error select,
+.validate-error textarea {
+    border: 1px solid #e3342f;
+}
+
+.validated-form__errors {
+    font-size: 0.9em;
+    color: #e3342f;
+}
+.card-link {
+    display: block;
+    text-decoration: none;
+}
+form.user select.form-control-user {
+    padding: 0px 0px 0px 5px !important;
+    height: 50px !important;
+}
+.provider_logo {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.rounded-image {
+    border-radius: 50% !important;
+}
+.headerLinks {
+    color: #fff;
+}
+.headerLinks a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.4s all ease;
+}
+.headerLinks a:hover {
+    text-decoration: underline;
+}
+@media (min-width: 768px) {
+    .sidebar {
+        width: 250px !important;
+        overflow-x: hidden;
+        overflow-y: auto !important;
+    }
+}

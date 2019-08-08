@@ -273,8 +273,8 @@ const mapDispatchToProps = dispatch => {
         signUp: creds => dispatch(signUp(creds))
     };
 };
-const connectedPage = connect(
+
+export default connect(
     mapStateToProps,
     mapDispatchToProps
 )(RegisterPage);
-export { connectedPage as RegisterPage };

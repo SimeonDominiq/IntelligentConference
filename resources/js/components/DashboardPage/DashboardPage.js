@@ -113,6 +113,4 @@ const mapStateToProps = state => {
     };
 };
 
-const connectedPage = connect(mapStateToProps)(DashboardPage);
-
-export { connectedPage as DashboardPage };
+export default connect(mapStateToProps)(DashboardPage);

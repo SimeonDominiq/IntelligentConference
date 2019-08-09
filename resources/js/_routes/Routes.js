@@ -2,7 +2,6 @@ import React from "react";
 import Loadable from "react-loadable";
 import MainApp from "../components/MainApp";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
-import { DashboardPage } from "../components/DashboardPage";
 import { AddConference } from "../components/AddConference";
 import { ConferenceDetails } from "../components/ConferenceDetails";
 import { NotFound } from "../NotFound";
@@ -10,7 +9,16 @@ import { AddTalk } from "../components/AddTalk";
 
 const LoginPage = Loadable({
     loader: () => import("../components/LoginPage/LoginPage"),
-    loading: "<div>Loading</div>"
+    loading() {
+        return <div>Loading...</div>;
+    }
+});
+
+const DashboardPage = Loadable({
+    loader: () => import("../components/DashboardPage"),
+    loading() {
+        return <div>Loading...</div>;
+    }
 });
 
 const Routes = [

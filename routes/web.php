@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function() {
+    dd("HomePage");
+});
 Route::get('/hello', function() {
     dd("Hello");
 });

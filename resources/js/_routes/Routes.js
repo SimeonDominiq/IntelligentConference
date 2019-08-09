@@ -1,12 +1,17 @@
 import React from "react";
+import Loadable from "react-loadable";
 import MainApp from "../components/MainApp";
-import LoginPage from "../components/LoginPage/LoginPage";
 import RegisterPage from "../components/RegisterPage/RegisterPage";
 import { DashboardPage } from "../components/DashboardPage";
 import { AddConference } from "../components/AddConference";
 import { ConferenceDetails } from "../components/ConferenceDetails";
 import { NotFound } from "../NotFound";
 import { AddTalk } from "../components/AddTalk";
+
+const LoginPage = Loadable({
+    loader: () => import("../components/LoginPage/LoginPage"),
+    loading: "<div>Loading</div>"
+});
 
 const Routes = [
     {
